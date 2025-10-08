@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="DECORINSA - Diseño de interiores y reformas integrales. Sede en Castellón. Bilingüe español / català." />
   <meta name="keywords" content="diseño de interiores, reformas Castellón, Gemma Insa Latorre, decoradores Castellón, reformas integrales" />
-  <meta name="google-site-verification" content="F4NWcgiri1rRYF6eTAX_i0rNkgPvoDm-YURVeVWzVjM" />
   <title>DECORINSA — Diseño y reformas | Gemma Insa Latorre</title>
   <style>
     :root{--bg:#fbfbf9;--paper:#ffffff;--accent:#7aa37a;--warm:#d9c6b1;--muted:#6b6b6b;--radius:14px;--container:1100px;font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color: #1b1b1b}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--muted);-webkit-font-smoothing:antialiased}
     header{background:var(--paper);border-bottom:1px solid #eee} .wrap{max-width:var(--container);margin:0 auto;padding:28px} .brand{display:flex;align-items:center;gap:14px} .logo{width:58px;height:58px;border-radius:12px;background:linear-gradient(135deg,var(--warm),#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#5a3f2b} nav{margin-left:auto;display:flex;gap:10px;align-items:center} a.btn{padding:8px 14px;border-radius:10px;text-decoration:none;border:1px solid transparent;background:transparent;color:var(--muted);font-size:14px} a.cta{background:var(--accent);color:white;border-radius:10px;padding:10px 14px;text-decoration:none} main{padding:36px 0} .hero{display:flex;gap:40px;align-items:center} .hero .left{flex:1} h1{margin:0;font-size:34px;color:#1b1b1b} p.lead{margin-top:12px;color:#444;font-size:16px;line-height:1.5} .card{background:var(--paper);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(20,20,20,0.04);color:#333} .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px} .services .s{padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(122,163,122,0.06),transparent)} .about{display:flex;gap:18px;align-items:center} .about img{width:160px;height:160px;border-radius:12px;object-fit:cover} .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px} .gallery-grid img{width:100%;height:140px;object-fit:cover;border-radius:10px;cursor:pointer} footer{padding:28px 0;margin-top:36px;color:#666} .lang-switch{display:flex;gap:8px;align-items:center} .pill{padding:6px 10px;border-radius:999px;border:1px solid #eee;background:#fff;cursor:pointer;font-size:12px;font-weight:600} .pill.active{background:var(--accent);color:white;border-color:var(--accent)} .modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:20px;z-index:100} .modal.open{display:flex} .modal .inner{max-width:980px;width:100%;background:#fff;border-radius:12px;padding:12px} .modal img{width:100%;height:auto;border-radius:8px} .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
+    .pricing-table{background:var(--paper);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(20,20,20,0.04);margin-top:16px} .price-item{border-bottom:1px dashed #eee;padding:10px 0;display:flex;justify-content:space-between} .price-item:last-child{border-bottom:none} .price-item strong{color:#1b1b1b}
     @media (max-width:760px){.hero{flex-direction:column}.about{flex-direction:column;text-align:center}.about img{width:120px;height:120px} nav{display:none} header .wrap{display:block;text-align:center} .brand{justify-content:center} .lang-switch{justify-content:center;margin-top:14px}}
   </style>
 </head>
@@ -30,8 +30,9 @@
           <div class="pill" onclick="setLang('ca')" id="lang-ca">CA</div>
         </div>
         <a class="btn" href="#proyectos" data-i18n="nav-gallery">Proyectos</a>
+        <a class="btn" href="#presupuestos" data-i18n="nav-budget">Presupuestos</a>
         <a class="btn" href="#contacto" data-i18n="nav-contact">Contacto</a>
-        <a class="cta" href="mailto:info@decorinsa.example" data-i18n="nav-quote">Pedir presupuesto</a>
+        <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="nav-quote">Pedir presupuesto</a>
       </nav>
     </div>
   </header>
@@ -49,7 +50,7 @@
         <div class="card">
           <div style="font-size:13px;color:var(--muted)">Quiénes somos / Qui som</div>
           <div class="about" style="margin-top:8px">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Gemma Insa">
+            <img src="https://images.unsplash.com/photo-1596854744158-75c6020c025d?q=80&w=800&auto=format&fit=crop" alt="Gemma Insa">
             <div>
               <div style="font-weight:700;color:#1b1b1b" data-i18n="about-name">Gemma Insa Latorre</div>
               <div style="font-size:14px;color:#444;margin-top:6px" data-i18n="about-role">Diseñadora de interiores y responsable de reformas</div>
@@ -60,8 +61,6 @@
       </div>
     </section>
     
-    ---
-
     <section id="servicios" style="margin-top:28px">
       <h3 style="color:#1b1b1b" data-i18n="services-title">Servicios / Serveis</h3>
       <div class="services">
@@ -83,23 +82,52 @@
         </div>
       </div>
     </section>
-
-    ---
     
-    <section id="proyectos" style="margin-top:28px">
-      <h3 style="color:#1b1b1b" data-i18n="projects-title">Galería de proyectos / Galeria de projectes</h3>
-      <p style="font-size:13px;color:#666" data-i18n="projects-desc">Ejemplos de reformas inspiradoras (imágenes de proyectos reales o de stock con estilo).</p>
-      <div class="gallery-grid" id="gallery">
-        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Salón moderno y luminoso" onclick="openModal(this.src)">
-        <img src="https://images.unsplash.com/photo-1588851752496-e2a1ed429676?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Cocina abierta con isla" onclick="openModal(this.src)">
-        <img src="https://images.unsplash.com/photo-1541178204680-a6198f1025a7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dormitorio con toques de madera" onclick="openModal(this.src)">
-        <img src="https://images.unsplash.com/photo-1540608554271-e94119d5c411?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Baño con materiales naturales" onclick="openModal(this.src)">
-        <img src="https://images.unsplash.com/photo-151291872884b-014e7a88d1d8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rincón de lectura y luz" onclick="openModal(this.src)">
-        <img src="https://images.unsplash.com/photo-1549488344-ec853f65e49f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Detalle de diseño y textura" onclick="openModal(this.src)">
-      </div>
+    <section id="presupuestos" style="margin-top:28px">
+        <h3 style="color:#1b1b1b" data-i18n="budget-title">Presupuestos Orientativos en Castellón</h3>
+        <p style="font-size:13px;color:#666" data-i18n="budget-desc">Los precios son estimaciones basadas en costes medios del sector en la provincia de Castellón. El precio final dependerá siempre de la calidad de los acabados.</p>
+        <div class="pricing-table">
+            <div class="price-item">
+                <span data-i18n="budget-reform-sqm">Reforma Integral (precio por m²)</span>
+                <strong>450 € - 800 €/m²</strong>
+            </div>
+            <div class="price-item">
+                <span data-i18n="budget-design-sqm">Honorarios Diseño de Interiores</span>
+                <strong>20 € - 40 €/m²</strong>
+            </div>
+            <div class="price-item">
+                <span data-i18n="budget-average-70m">Reforma Integral Piso 70 m² (rango medio)</span>
+                <strong>31.500 € - 56.000 €</strong>
+            </div>
+            <div class="price-item">
+                <span data-i18n="budget-bathroom-6m">Reforma Baño (aprox. 6 m²)</span>
+                <strong>Desde 5.500 €</strong>
+            </div>
+            <div class="price-item">
+                <span data-i18n="budget-kitchen-8m">Reforma Cocina (aprox. 8 m²)</span>
+                <strong>Desde 10.000 €</strong>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:20px;">
+            <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="budget-cta">Solicitar presupuesto personalizado</a>
+        </div>
     </section>
 
-    ---
+    <section id="proyectos" style="margin-top:28px">
+      <h3 style="color:#1b1b1b" data-i18n="projects-title">Galería de proyectos / Galeria de projectes</h3>
+      <p style="font-size:13px;color:#666" data-i18n="projects-desc">Ejemplos de reformas inspiradoras de viviendas modestas y minimalistas.</p>
+      <div class="gallery-grid" id="gallery">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop" alt="Salón moderno y luminoso" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1588851752496-e2a1ed429676?q=80&w=1200&auto=format&fit=crop" alt="Cocina abierta con isla" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1541178204680-a6198f1025a7?q=80&w=1200&auto=format&fit=crop" alt="Dormitorio con toques de madera" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1540608554271-e94119d5c411?q=80&w=1200&auto=format&fit=crop" alt="Baño con materiales naturales" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1556911220-d3a373674693?q=80&w=1200&auto=format&fit=crop" alt="Cocina minimalist renovada" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1615529128328-97c9b8408f9c?q=80&w=1200&auto=format&fit=crop" alt="Dormitorio sencillo y brillante" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1567016335345-e6593a109a15?q=80&w=1200&auto=format&fit=crop" alt="Salón con luz natural" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-151291872884b-014e7a88d1d8?q=80&w=1200&auto=format&fit=crop" alt="Rincón de lectura y luz" onclick="openModal(this.src)">
+        <img src="https://images.unsplash.com/photo-1549488344-ec853f65e49f?q=80&w=1200&auto=format&fit=crop" alt="Detalle de diseño y textura" onclick="openModal(this.src)">
+      </div>
+    </section>
 
     <section id="contacto" style="margin-top:28px">
       <h3 style="color:#1b1b1b" data-i18n="contact-title">Contacta con DECORINSA</h3>
@@ -107,11 +135,11 @@
       <div class="contact-grid">
         <div class="card" style="text-align:center">
           <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-email">Email</div>
-          <a href="mailto:info@decorinsa.example" style="color:var(--accent);text-decoration:none">info@decorinsa.example</a>
+          <a href="mailto:insagemma@gmail.com" style="color:var(--accent);text-decoration:none">insagemma@gmail.com</a>
         </div>
         <div class="card" style="text-align:center">
           <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-phone">Teléfono</div>
-          <a href="tel:+34123456789" style="color:var(--accent);text-decoration:none">+34 123 456 789</a>
+          <a href="tel:+34658646384" style="color:var(--accent);text-decoration:none">+34 658 646 384</a>
         </div>
         <div class="card" style="text-align:center">
           <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-location">Ubicación</div>
@@ -140,6 +168,7 @@
     const translations = {
         'es': {
             'nav-gallery': 'Proyectos',
+            'nav-budget': 'Presupuestos',
             'nav-contact': 'Contacto',
             'nav-quote': 'Pedir presupuesto',
             'hero-title': 'DECORINSA — transformar casas, mejorar vidas',
@@ -159,7 +188,15 @@
             's4-title': 'Proyectos a medida',
             's4-desc': 'Adaptamos cada reforma a tu estilo y presupuesto.',
             'projects-title': 'Galería de proyectos / Galeria de projectes',
-            'projects-desc': 'Ejemplos de reformas inspiradoras (imágenes de proyectos reales o de stock con estilo).',
+            'projects-desc': 'Ejemplos de reformas inspiradoras de viviendas modestas y minimalistas.',
+            'budget-title': 'Presupuestos Orientativos en Castellón',
+            'budget-desc': 'Los precios son estimaciones basadas en costes medios del sector en la provincia de Castellón. El precio final dependerá siempre de la calidad de los acabados.',
+            'budget-reform-sqm': 'Reforma Integral (precio por m²)',
+            'budget-design-sqm': 'Honorarios Diseño de Interiores',
+            'budget-average-70m': 'Reforma Integral Piso 70 m² (rango medio)',
+            'budget-bathroom-6m': 'Reforma Baño (aprox. 6 m²)',
+            'budget-kitchen-8m': 'Reforma Cocina (aprox. 8 m²)',
+            'budget-cta': 'Solicitar presupuesto personalizado',
             'contact-title': 'Contacta con DECORINSA',
             'contact-lead': '¿Tienes una idea de reforma en mente? Hablemos de tu proyecto.',
             'contact-email': 'Email',
@@ -168,6 +205,7 @@
         },
         'ca': {
             'nav-gallery': 'Projectes',
+            'nav-budget': 'Pressupostos',
             'nav-contact': 'Contacte',
             'nav-quote': 'Demanar pressupost',
             'hero-title': 'DECORINSA — transformar cases, millorar vides',
@@ -187,7 +225,15 @@
             's4-title': 'Projectes a mida',
             's4-desc': 'Adaptem cada reforma al teu estil i pressupost.',
             'projects-title': 'Galeria de projectes / Galería de proyectos',
-            'projects-desc': 'Exemples de reformes inspiradores (imatges de projectes reals o de stock amb estil).',
+            'projects-desc': 'Exemples de reformes inspiradores d\'habitatges modestos i minimalistes.',
+            'budget-title': 'Pressupostos Orientatius a Castelló',
+            'budget-desc': 'Els preus són estimacions basades en costos mitjans del sector a la província de Castelló. El preu final dependrà sempre de la qualitat dels acabats.',
+            'budget-reform-sqm': 'Reforma Integral (preu per m²)',
+            'budget-design-sqm': 'Honoraris Disseny d\'Interiors',
+            'budget-average-70m': 'Reforma Integral Pis 70 m² (rang mitjà)',
+            'budget-bathroom-6m': 'Reforma Bany (aprox. 6 m²)',
+            'budget-kitchen-8m': 'Reforma Cuina (aprox. 8 m²)',
+            'budget-cta': 'Sol·licitar pressupost personalitzat',
             'contact-title': 'Contacta amb DECORINSA',
             'contact-lead': 'Tens una idea de reforma al cap? Parlem del teu projecte.',
             'contact-email': 'Email',
@@ -202,21 +248,15 @@
      */
     function setLang(lang) {
         const t = translations[lang];
-
-        // 1. Aplicar traducciones a todos los elementos con data-i18n
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key]) {
                 el.textContent = t[key];
             }
         });
-
-        // 2. Actualizar la clase 'active' de los botones de idioma
         document.getElementById('lang-es').classList.remove('active');
         document.getElementById('lang-ca').classList.remove('active');
         document.getElementById('lang-' + lang).classList.add('active');
-
-        // 3. Ajustar el atributo lang del HTML (opcional pero bueno para accesibilidad)
         document.documentElement.lang = lang;
     }
 
@@ -241,5 +281,4 @@
     });
   </script>
 </body>
-
 </html>
