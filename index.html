@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="DECORINSA - Diseño de interiores y reformas integrales. Sede en Castellón. Bilingüe español / català." />
-  <meta name="keywords" content="diseño de interiores, reformas Castellón, Gemma Insa Latorre, decoradores Castellón, reformas integrales" />
-  <title>DECORINSA — Diseño y reformas | Gemma Insa Latorre</title>
+  <meta name="description" content="DECORINSA: Especialistas en diseño de interiores y reformas integrales de viviendas. Creamos espacios naturales, luminosos y funcionales en Castellón." />
+  <meta name="keywords" content="diseño de interiores Castellón, reformas integrales, Gemma Insa Latorre, decoradores, pisos antiguos reforma, Castellón" />
+  <title>DECORINSA — Diseño y reformas de interiores | Gemma Insa Latorre (Castellón)</title>
+  
   <style>
+    /* CSS: Añadida transición para mejor UX en el cambio de idioma */
     :root {
       --bg: #f6f5f2;
       --paper: #fffefd;
@@ -80,6 +82,10 @@
       border-radius: 10px;
       padding: 10px 14px;
       text-decoration: none;
+      transition: background 0.2s; /* Añadido para UX */
+    }
+    a.cta:hover {
+        background: #6a936a; /* Color de hover para el CTA */
     }
     main {
       padding: 36px 0;
@@ -173,6 +179,7 @@
       cursor: pointer;
       font-size: 12px;
       font-weight: 600;
+      transition: background 0.2s; /* Añadido para UX */
     }
     .pill.active {
       background: var(--accent);
@@ -188,6 +195,7 @@
       justify-content: center;
       padding: 20px;
       z-index: 100;
+      cursor: pointer; /* Permite cerrar al pulsar fuera */
     }
     .modal.open { display: flex }
     .modal .inner {
@@ -196,6 +204,7 @@
       background: #fff;
       border-radius: 12px;
       padding: 12px;
+      pointer-events: auto; /* Necesario para que el evento de clic funcione en la imagen, ajustado de 'none' */
     }
     .modal img {
       width: 100%;
@@ -240,22 +249,24 @@
     <div class="wrap" style="display:flex;align-items:center">
       <div class="brand">
         <div class="logo">
-          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#e6ded5"/><path d="M16 34Q18 18 32 16Q30 32 16 34Z" fill="#bda088"/><text x="24" y="30" font-family="Georgia,serif" font-size="18" fill="#7a5a3d" text-anchor="middle" font-weight="bold">D</text></svg>
+          <svg viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
+            <title id="logo-title">DECORINSA Logo</title>
+            <circle cx="24" cy="24" r="22" fill="#e6ded5"/><path d="M16 34Q18 18 32 16Q30 32 16 34Z" fill="#bda088"/><text x="24" y="30" font-family="Georgia,serif" font-size="18" fill="#7a5a3d" text-anchor="middle" font-weight="bold">D</text>
+          </svg>
         </div>
         <div>
           <div style="font-weight:700;color:#1b1b1b">DECORINSA</div>
           <div style="font-size:12px;color:var(--muted)">Diseño & Reformas — Gemma Insa Latorre</div>
         </div>
       </div>
-      <nav>
-        <div class="lang-switch">
-          <div class="pill active" onclick="setLang('es')" id="lang-es">ES</div>
-          <div class="pill" onclick="setLang('ca')" id="lang-ca">CA</div>
+      <nav aria-label="Navegación principal"> <div class="lang-switch">
+          <div class="pill active" onclick="setLang('es')" id="lang-es" tabindex="0" role="button" aria-pressed="true" aria-label="Cambiar a Español">ES</div>
+          <div class="pill" onclick="setLang('ca')" id="lang-ca" tabindex="0" role="button" aria-pressed="false" aria-label="Cambiar a Catalán">CA</div>
         </div>
         <a class="btn" href="#proyectos" data-i18n="nav-gallery">Proyectos</a>
         <a class="btn" href="#presupuestos" data-i18n="nav-budget">Presupuestos</a>
         <a class="btn" href="#contacto" data-i18n="nav-contact">Contacto</a>
-        <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="nav-quote">Pedir presupuesto</a>
+        <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="nav-quote" aria-label="Pedir presupuesto por email">Pedir presupuesto</a>
       </nav>
     </div>
   </header>
@@ -275,8 +286,7 @@
         <div class="card">
           <div style="font-size:13px;color:var(--muted)">Quiénes somos / Qui som</div>
           <div class="about" style="margin-top:8px">
-            <!-- Foto personalizada de tu madre -->
-            <img src="img/madre.jpg" alt="Gemma Insa">
+            <img src="img/madre.jpg" alt="Retrato de Gemma Insa Latorre, diseñadora de interiores">
             <div>
               <div style="font-weight:700;color:#1b1b1b" data-i18n="about-name">Gemma Insa Latorre</div>
               <div style="font-size:14px;color:#444;margin-top:6px" data-i18n="about-role">Diseñadora de interiores y responsable de reformas</div>
@@ -352,17 +362,13 @@
         Ejemplos de reformas inspiradoras de viviendas modestas y minimalistas.
       </p>
       <div class="gallery-grid" id="gallery">
-        <img src="img/galeria1.jpg" alt="Salón moderno y luminoso" onclick="openModal(this.src)">
-        <img src="img/galeria2.jpg" alt="Cocina abierta con isla" onclick="openModal(this.src)">
-        <img src="img/galeria3.jpg" alt="Dormitorio con toques de madera" onclick="openModal(this.src)">
-        <img src="img/galeria4.jpg" alt="Baño con materiales naturales" onclick="openModal(this.src)">
-        <img src="img/galeria5.jpg" alt="Cocina minimalista renovada" onclick="openModal(this.src)">
-        <img src="img/galeria6.jpg" alt="Dormitorio sencillo y brillante" onclick="openModal(this.src)">
-        <img src="img/galeria7.jpg" alt="Salón con luz natural" onclick="openModal(this.src)">
-        <img src="img/galeria8.jpg" alt="Rincón de lectura y luz" onclick="openModal(this.src)">
-        <img src="img/galeria9.jpg" alt="Detalle de diseño y textura" onclick="openModal(this.src)">
-        <img src="img/galeria10.jpg" alt="Galería de arte en reforma" onclick="openModal(this.src)">
-      </div>
+        <img src="img/galeria1.jpg" alt="Salón moderno y luminoso con chimenea" onclick="openModal(this.src)">
+        <img src="img/galeria2.jpg" alt="Cocina abierta con isla y acabados en madera clara" onclick="openModal(this.src)">
+        <img src="img/galeria3.jpg" alt="Dormitorio minimalista con paredes neutras y cabecero de madera" onclick="openModal(this.src)">
+        <img src="img/galeria_bano.jpg" alt="Baño con azulejo de metro blanco y ducha de cristal" onclick="openModal(this.src)">
+        <img src="img/galeria_salon_cocina.jpg" alt="Vista integrada de salón y cocina con mucha luz natural" onclick="openModal(this.src)">
+        <img src="img/galeria_bano2.jpg" alt="Baño con lavabo de piedra y espejos redondos" onclick="openModal(this.src)">
+        </div>
     </section>
     <section id="contacto" style="margin-top:28px">
       <h3 style="color:#1b1b1b" data-i18n="contact-title">Contacta con DECORINSA</h3>
@@ -376,7 +382,7 @@
         </div>
         <div class="card" style="text-align:center">
           <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-phone">Teléfono</div>
-          <a href="tel:+34685646384" style="color:var(--accent);text-decoration:none">+34 685 646 384</a>
+          <a href="tel:+34607738363" style="color:var(--accent);text-decoration:none">+34 607 738 363</a>
         </div>
         <div class="card" style="text-align:center">
           <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-location">Ubicación</div>
@@ -392,7 +398,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal" id="imageModal" onclick="closeModal()">
+  <div class="modal" id="imageModal" onclick="closeModal()" aria-modal="true" role="dialog" aria-label="Galería de imágenes ampliada">
     <div class="inner" onclick="event.stopPropagation()">
       <img id="modalImage" src="" alt="Proyecto de reforma ampliado">
     </div>
@@ -484,6 +490,10 @@
       document.getElementById('lang-ca').classList.remove('active');
       document.getElementById('lang-' + lang).classList.add('active');
       document.documentElement.lang = lang;
+      
+      // Accesibilidad: Actualizar aria-pressed
+      document.getElementById('lang-es').setAttribute('aria-pressed', lang === 'es');
+      document.getElementById('lang-ca').setAttribute('aria-pressed', lang === 'ca');
     }
     function openModal(imageSrc) {
       const modal = document.getElementById('imageModal');
@@ -494,7 +504,16 @@
     function closeModal() {
       document.getElementById('imageModal').classList.remove('open');
     }
-    document.addEventListener('DOMContentLoaded', () => { setLang('es'); });
+    document.addEventListener('DOMContentLoaded', () => { 
+      setLang('es'); 
+
+      // Cerrar modal con la tecla ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+    });
   </script>
 </body>
 </html>
