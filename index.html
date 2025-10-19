@@ -1,519 +1,207 @@
 <!doctype html>
 <html lang="es">
-<cabeza>
+<head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="ancho=ancho-del-dispositivo,escala-inicial=1" />
-  <meta name="description" content="DECORINSA: Especialistas en diseño de interiores y reformas integrales de viviendas. Creamos espacios naturales, luminosos y funcionales en Castellón." />
-  <meta name="keywords" content="diseño de interiores Castellón, reformas integrales, Gemma Insa Latorre, decoradores, pisos antiguos reforma, Castellón" />
-  <title>DECORINSA — Diseño y reformas de interiores | Gemma Insa Latorre (Castellón)</title>
-  
-  <estilo>
-    /* CSS: Añadida transición para mejor UX en el cambio de idioma */
-    :raíz {
-      --bg: #f6f5f2;
-      --papel: #fffefd;
-      --acento: #7aa37a;
-      --caliente: #d9c6b1;
-      --silenciado: #6b6b6b;
-      --radio: 14px;
-      --contenedor: 1100px;
-      familia de fuentes: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      color: #1b1b1b;
-    }
-    * { tamaño de caja: caja de borde }
-    cuerpo {
-      margen: 0;
-      fondo: gradiente lineal (135 grados, #f6f5f2 0%, #e7e2d9 100%);
-      color: var(--silenciado);
-      -webkit-font-smoothing: suavizado de fuentes;
-      altura mínima: 100vh;
-    }
-    encabezado {
-      fondo: var(--papel);
-      borde inferior: 1px sólido #eee;
-      caja-sombra: 0 2px 10px rgba(180,160,140,0.03);
-    }
-    .envoltura {
-      ancho máximo: var(--contenedor);
-      margen: 0 automático;
-      relleno: 28px;
-    }
-    .marca {
-      pantalla: flex;
-      alinear-elementos: centro;
-      espacio: 14px;
-    }
-    .logotipo {
-      ancho: 62px;
-      altura: 62px;
-      radio del borde: 16px;
-      fondo: gradiente lineal (135 grados, #d9c6b1 70 %, #fffefd 100 %);
-      pantalla: flex;
-      alinear-elementos: centro;
-      justificar-contenido: centro;
-      peso de fuente: 900;
-      tamaño de fuente: 30px;
-      color: #7a5a3d;
-      caja-sombra: 0 2px 12px rgba(217,198,177,0.08);
-    }
-    .logotipo svg {
-      ancho: 40px;
-      altura: 40px;
-      pantalla: bloque;
-    }
-    navegación {
-      margen izquierdo: automático;
-      pantalla: flex;
-      espacio: 10px;
-      alinear-elementos: centro;
-    }
-    a.btn {
-      relleno: 8px 14px;
-      radio del borde: 10px;
-      decoración de texto: ninguna;
-      borde: 1px sólido transparente;
-      fondo: transparente;
-      color: var(--silenciado);
-      tamaño de fuente: 14px;
-    }
-    a.cta {
-      fondo: var(--acento);
-      color: blanco;
-      radio del borde: 10px;
-      relleno: 10px 14px;
-      decoración de texto: ninguna;
-      transición: fondo 0,2 s; /* Añadido para UX */
-    }
-    a.cta:hover {
-        antecedentes: #6a936a; /* Color de desplazamiento para el CTA */
-    }
-    principal {
-      relleno: 36px 0;
-      fondo: rgba(255,255,255,0.83);
-      radio del borde: 36px;
-      caja-sombra: 0 10px 40px rgba(180,160,140,0.12);
-      margen superior: 38px;
-    }
-    .héroe {
-      pantalla: flex;
-      espacio: 40px;
-      alinear-elementos: centro;
-    }
-    .héroe .izquierda { flex: 1 }
-    h1 {
-      margen: 0;
-      tamaño de fuente: 34px;
-      color: #1b1b1b;
-    }
-    p.lead {
-      margen superior: 12px;
-      color: #444;
-      tamaño de fuente: 16px;
-      altura de línea: 1,5
-    }
-    .tarjeta {
-      fondo: var(--papel);
-      radio del borde: var(--radio);
-      relleno: 18px;
-      caja-sombra: 0 6px 18px rgba(20,20,20,0.04);
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="DECORINSA - Diseño de interiores y reformas integrales en Castellón. Reformamos tu hogar con estilo, calidad y cercanía. Bilingüe español / català." />
+  <meta name="keywords" content="DECORINSA, diseño de interiores, reformas Castellón, Gemma Insa Latorre, interiorismo, decoración" />
+  <title>DECORINSA | Diseño y Reformas en Castellón</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background-color: #faf8f5;
       color: #333;
+      line-height: 1.6;
     }
-    .servicios {
-      pantalla: cuadrícula;
-      columnas-de-plantilla-de-cuadrícula: repeat(auto-fit,minmax(220px,1fr));
-      espacio: 14px;
-      margen superior: 16px;
-    }
-    .servicios .s {
-      relleno: 14px;
-      radio del borde: 10px;
-      fondo: gradiente lineal (180 grados, rgba (122, 163, 122, 0.06), transparente);
-    }
-    .acerca de {
-      pantalla: flex;
-      espacio: 18px;
-      alinear-elementos: centro;
-    }
-    .acerca de img {
-      ancho: 160px;
-      altura: 160px;
-      radio del borde: 12px;
-      objeto-ajuste: cubierta;
-    }
-    .cuadrícula de galería {
-      pantalla: cuadrícula;
-      columnas-de-plantilla-de-cuadrícula: repeat(auto-fit,minmax(200px,1fr));
-      espacio: 16px;
-      margen superior: 18px;
-    }
-    .galería-cuadrícula img {
-      ancho: 100%;
-      altura: 160px;
-      objeto-ajuste: cubierta;
-      radio del borde: 12px;
-      caja-sombra: 0 2px 12px rgba(180,160,140,0.08);
-      cursor: puntero;
-      transición: transformar 0,14s cúbico-bezier(.25,.1,.38,1.5);
-      fondo: gradiente lineal (135 grados, #f2ede6 0%, #eceae4 100%);
-    }
-    .galería-cuadrícula img:hover {
-      transformar: escala(1.04) rotar(-1deg);
-      caja-sombra: 0 8px 28px rgba(180,160,140,0.14);
-      índice z: 2;
-    }
-    pie de página {
-      relleno: 28px 0;
-      margen superior: 36px;
-      color: #666;
-    }
-    .cambio de idioma {
-      pantalla: flex;
-      espacio: 8px;
-      alinear-elementos: centro;
-    }
-    .píldora {
-      relleno: 6px 10px;
-      radio del borde: 999px;
-      borde: 1px sólido #eee;
-      fondo: #fff;
-      cursor: puntero;
-      tamaño de fuente: 12px;
-      peso de fuente: 600;
-      transición: fondo 0,2 s; /* Añadido para UX */
-    }
-    .píldora.activa {
-      fondo: var(--acento);
-      color: blanco;
-      color del borde: var(--acento);
-    }
-    .modal {
-      posición: fija;
-      inserción: 0;
-      fondo: rgba(0,0,0,0.8);
-      pantalla: ninguna;
-      alinear-elementos: centro;
-      justificar-contenido: centro;
-      relleno: 20px;
-      índice z: 100;
-      cursor: puntero; /*Permite cerrar al pulsar fuera */
-    }
-    .modal.open { pantalla: flex }
-    .modal .inner {
-      ancho máximo: 980px;
-      ancho: 100%;
-      fondo: #fff;
-      radio del borde: 12px;
-      relleno: 12px;
-      eventos de puntero: automático; /* Necesario para que el evento de clic funcione en la imagen, ajustado de 'none' */
-    }
-    .modal img {
-      ancho: 100%;
-      altura:auto;
-      radio del borde: 8px;
-    }
-    .contact-grid {
-      pantalla: cuadrícula;
-      columnas-de-plantilla-de-cuadrícula: repeat(auto-fit,minmax(200px,1fr));
-      espacio: 14px;
-      margen superior: 16px;
-    }
-    .tabla-de-precios {
-      fondo: var(--papel);
-      radio del borde: var(--radio);
-      relleno: 20px;
-      caja-sombra: 0 6px 18px rgba(20,20,20,0.04);
-      margen superior: 16px;
-    }
-    .precio-artículo {
-      borde inferior: 1px discontinuo #eee;
-      relleno: 10px 0;
-      pantalla: flex;
-      justificar-contenido: espacio-entre;
-    }
-    .price-item:last-child { border-bottom: none }
-    .price-item fuerte { color: #1b1b1b }
-    @media (ancho máximo: 760px) {
-      .hero { flex-direction: columna }
-      .about { flex-direction: columna; text-align: centro }
-      .sobre img { ancho: 120px; alto: 120px }
-      nav { display: ninguno }
-      encabezado .wrap { visualización: bloque; alineación del texto: centro }
-      .brand { justificar-contenido: centro }
-      .lang-switch { justificar-contenido: centro; margen-superior: 14px }
-      principal { margen superior: 8px; radio del borde: 0; }
-    }
-  </estilo>
-</cabeza>
-<cuerpo>
-  <encabezado>
-    <div clase="wrap" estilo="display:flex;align-items:center">
-      <div class="marca">
-        <div class="logo">
-          <svg viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
-            <title id="logo-title">Logotipo de DECORINSA</title>
-            <circle cx="24" cy="24" r="22" fill="#e6ded5"/><path d="M16 34Q18 18 32 16Q30 32 16 34Z" fill="#bda088"/><text x="24" y="30" font-family="Georgia,serif" font-size="18" fill="#7a5a3d" text-anchor="middle" font-weight="bold">D</text>
-          </svg>
-        </div>
-        <div>
-          <div style="font-weight:700;color:#1b1b1b">DECORINSA</div>
-          <div style="font-size:12px;color:var(--muted)">Diseño & Reformas — Gemma Insa Latorre</div>
-        </div>
-      </div>
-      <nav aria-label="Navegación principal"> <div class="lang-switch">
-          <div class="píldora activa" onclick="setLang('es')" id="lang-es" tabindex="0" role="button" aria-pressed="true" aria-label="Cambiar a Español">ES</div>
-          <div class="pill" onclick="setLang('ca')" id="lang-ca" tabindex="0" role="button" aria-pressed="false" aria-label="Cambiar a Catalán">CA</div>
-        </div>
-        <a class="btn" href="#proyectos" data-i18n="nav-gallery">Proyectos</a>
-        <a class="btn" href="#presupuestos" data-i18n="nav-budget">Presupuestos</a>
-        <a class="btn" href="#contacto" data-i18n="nav-contact">Contacto</a>
-        <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="nav-quote" aria-label="Pedir presupuesto por email">Pedir presupuesto</a>
-      </nav>
-    </div>
-  </encabezado>
-  <clase principal="wrap">
-    <section class="héroe">
-      <div class="izquierda">
-        <h1 data-i18n="hero-title">DECORINSA — transformar casas, mejorar vidas</h1>
-        <p class="lead" data-i18n="héroe-lead">
-          Diseño de interiores y reformas integrales: modernizamos pisos antiguos con soluciones naturales, luminosas y funcionales. Sede en Castellón.
-        </p>
-        <div style="margin-top:18px;display:flex;gap:10px">
-          <a class="cta" href="#contacto" data-i18n="hero-cta">Contacta con Gemma</a>
-          <a class="btn" href="#servicios" data-i18n="hero-learn">Ver servicios</a>
-        </div>
-      </div>
-      <div style="flex:0 0 420px">
-        <div class="tarjeta">
-          <div style="font-size:13px;color:var(--muted)">Quiénes somos / Qui som</div>
-          <div class="acerca de" style="margin-top:8px">
-            <img src="img/madre.jpg" alt="Retrato de Gemma Insa Latorre, diseñadora de interiores">
-            <div>
-              <div style="font-weight:700;color:#1b1b1b" data-i18n="about-name">Gemma Insa Latorre</div>
-              <div style="font-size:14px;color:#444;margin-top:6px" data-i18n="about-role">Diseñadora de interiores y responsable de reformas</div>
-              <p style="margin-top:8px;color:#555;font-size:13px" data-i18n="about-desc">Con más de 10 años transformando pisos: soluciones prácticas, materiales naturales y acabados que perduran.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </sección>
-    <section id="servicios" style="margin-top:28px">
-      <h3 style="color:#1b1b1b" data-i18n="services-title">Servicios / Serveis</h3>
-      <div class="servicios">
-        <div class="tarjeta s">
-          <div style="font-weight:700;color:#1b1b1b" data-i18n="s1-title">Diseño de interiores</div>
-          <div style="font-size:13px;margin-top:6px" data-i18n="s1-desc">
-            Distribuciones funcionales, paletas naturales y cálidas, selección de mobiliario e iluminación.
-          </div>
-        </div>
-        <div class="tarjeta s">
-          <div style="font-weight:700;color:#1b1b1b" data-i18n="s2-title">Reformas integrales</div>
-          <div style="font-size:13px;margin-top:6px" data-i18n="s2-desc">
-            Saneamiento, electricidad, cocinas y baños llave en mano, coordinación de gremios.
-          </div>
-        </div>
-        <div class="tarjeta s">
-          <div style="font-weight:700;color:#1b1b1b" data-i18n="s3-title">Asesoría de materiales</div>
-          <div style="font-size:13px;margin-top:6px" data-i18n="s3-desc">
-            Acabados naturales, soluciones sostenibles y presupuestos realistas.
-          </div>
-        </div>
-        <div class="tarjeta s">
-          <div style="font-weight:700;color:#1b1b1b" data-i18n="s4-title">Proyectos a medida</div>
-          <div style="font-size:13px;margin-top:6px" data-i18n="s4-desc">
-            Adaptamos cada reforma a tu estilo y presupuesto.
-          </div>
-        </div>
-      </div>
-    </sección>
-    <section id="presupuestos" style="margin-top:28px">
-      <h3 style="color:#1b1b1b" data-i18n="budget-title">Presupuestos Orientativos en Castellón</h3>
-      <p style="font-size:13px;color:#666" data-i18n="presupuesto-desc">
-        Los precios son estimaciones basadas en costes medios del sector en la provincia de Castellón. El precio final dependerá siempre de la calidad de los acabados.
-      </p>
-      <div class="tabla-de-precios">
-        <div class="precio-artículo">
-          <span data-i18n="budget-reform-sqm">Reforma Integral (precio por m²)</span>
-          450 € - 800 €/m²
-        </div>
-        <div class="precio-artículo">
-          <span data-i18n="budget-design-sqm">Honorarios Diseño de Interiores</span>
-          <strong>20 € - 40 €/m²</strong>
-        </div>
-        <div class="precio-artículo">
-          <span data-i18n="budget-average-70m">Reforma Integral Piso 70 m² (rango medio)</span>
-          <strong>31.500 € - 56.000 €</strong>
-        </div>
-        <div class="precio-artículo">
-          <span data-i18n="budget-bathroom-6m">Reforma Baño (aprox. 6 m²)</span>
-          Desde 5.500 €
-        </div>
-        <div class="precio-artículo">
-          <span data-i18n="budget-kitchen-8m">Reforma Cocina (aprox. 8 m²)</span>
-          Desde 10.000 €
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:20px;">
-        <a class="cta" href="mailto:insagemma@gmail.com" data-i18n="budget-cta">Solicitar presupuesto personalizado</a>
-      </div>
-    </sección>
-    <section id="proyectos" style="margin-top:28px">
-      <h3 style="color:#1b1b1b" data-i18n="projects-title">Galería de proyectos / Galería de proyectos</h3>
-      <p style="font-size:13px;color:#666" data-i18n="proyectos-desc">
-        Ejemplos de reformas inspiradoras de viviendas modestas y minimalistas.
-      </p>
-      <div class="gallery-grid" id="galería">
-        <img src="img/galeria1.jpg" alt="Salón moderno y luminoso con chimenea" onclick="openModal(this.src)">
-        <img src="img/galeria2.jpg" alt="Cocina abierta con isla y acabados en madera clara" onclick="openModal(this.src)">
-        <img src="img/galeria3.jpg" alt="Dormitorio minimalista con paredes neutras y cabecero de madera" onclick="openModal(this.src)">
-        <img src="img/galeria_bano.jpg" alt="Baño con azulejo de metro blanco y ducha de cristal" onclick="openModal(this.src)">
-        <img src="img/galeria_salon_cocina.jpg" alt="Vista integrada de salón y cocina con mucha luz natural" onclick="openModal(this.src)">
-        <img src="img/galeria_bano2.jpg" alt="Baño con lavabo de piedra y espejos redondos" onclick="openModal(this.src)">
-        </div>
-    </sección>
-    <section id="contacto" style="margin-top:28px">
-      <h3 style="color:#1b1b1b" data-i18n="contact-title">Contacta con DECORINSA</h3>
-      <p style="font-size:16px;color:#444" data-i18n="contacto-cliente">
-        ¿Tienes una idea de reforma en mente? Hablemos de tu proyecto.
-      </p>
-      <div class="cuadrícula de contacto">
-        <div class="tarjeta" style="text-align:center">
-          <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-email">Correo electrónico</div>
-          <a href="mailto:insagemma@gmail.com" style="color:var(--accent);text-decoration:none">insagemma@gmail.com</a>
-        </div>
-        <div class="tarjeta" style="text-align:center">
-          <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-phone">Teléfono</div>
-          <a href="tel:+34607738363" style="color:var(--accent);text-decoration:none">+34 607 738 363</a>
-        </div>
-        <div class="tarjeta" style="text-align:center">
-          <div style="font-weight:700;color:#1b1b1b;margin-bottom:8px" data-i18n="contact-location">Ubicación</div>
-          <div style="font-size:14px">Castellón de la Plana, España</div>
-        </div>
-      </div>
-    </sección>
-  </principal>
-  <pie de página>
-    <div class="wrap">
-      <div style="font-size:12px;text-align:center">
-        © 2025 DECORINSA — Diseño & Reformas. Gemma Insa Latorre.
-      </div>
-    </div>
-  </pie de página>
-  <div class="modal" id="imageModal" onclick="closeModal()" aria-modal="true" role="dialog" aria-label="Galería de imágenes ampliada">
-    <div class="inner" onclick="evento.stopPropagation()">
-      <img id="modalImage" src="" alt="Proyecto de reforma ampliado">
-    </div>
-  </div>
-  <guión>
-    traducciones constantes = {
-      'es': {
-        'nav-gallery': 'Proyectos',
-        'nav-budget': 'Presupuestos',
-        'nav-contact': 'Contacto',
-        'nav-quote': 'Pedir presupuesto',
-        'hero-title': 'DECORINSA — transformar casas, mejorar vidas',
-        'hero-lead': 'Diseño de interiores y reformas integrales: modernizamos pisos antiguos con soluciones naturales, luminosas y funcionales. Sede en Castellón.',
-        'hero-cta': 'Contacta con Gemma',
-        'hero-learn': 'Ver servicios',
-        'sobre-nombre': 'Gemma Insa Latorre',
-        'about-role': 'Diseñadora de interiores y responsable de reformas',
-        'about-desc': 'Con más de 10 años transformando pisos: soluciones prácticas, materiales naturales y acabados que perduran.',
-        'servicios-título': 'Servicios / Serveis',
-        's1-title': 'Diseño de interiores',
-        's1-desc': 'Distribuciones funcionales, paletas naturales y cálidas, selección de mobiliario e iluminación.',
-        's2-title': 'Reformas integrales',
-        's2-desc': 'Saneamiento, electricidad, cocinas y baños llave en mano, coordinación de gremios.',
-        's3-title': 'Asesoría de materiales',
-        's3-desc': 'Acabados naturales, soluciones sostenibles y presupuestos realistas.',
-        's4-title': 'Proyectos a medida',
-        's4-desc': 'Adaptamos cada reforma a tu estilo y presupuesto.',
-        'projects-title': 'Galería de proyectos / Galería de projectes',
-        'projects-desc': 'Ejemplos de reformas inspiradoras de viviendas modestas y minimalistas.',
-        'budget-title': 'Presupuestos Orientativos en Castellón',
-        'budget-desc': 'Los precios son estimaciones basadas en costes medios del sector en la provincia de Castellón. El precio final dependerá siempre de la calidad de los acabados.',
-        'presupuesto-reforma-m²': 'Reforma Integral (precio por m²)',
-        'presupuesto-diseño-m²': 'Honorarios Diseño de Interiores',
-        'budget-average-70m': 'Reforma Integral Piso 70 m² (rango medio)',
-        'presupuesto-baño-6m': 'Reforma Baño (aprox. 6 m²)',
-        'budget-kitchen-8m': 'Reforma Cocina (aprox. 8 m²)',
-        'budget-cta': 'Solicitar presupuesto personalizado',
-        'contact-title': 'Contacta con DECORINSA',
-        'contact-lead': '¿Tienes una idea de reforma en mente? Hablemos de tu proyecto.',
-        'contact-email': 'Correo electrónico',
-        'teléfono de contacto': 'Teléfono',
-        'contact-location': 'Ubicación'
-      },
-      'ca': {
-        'nav-gallery': 'Proyectos',
-        'nav-budget': 'Presupuesto',
-        'nav-contact': 'Contacto',
-        'nav-quote': 'Demanar pressupost',
-        'hero-title': 'DECORINSA — transformar casos, mejorar vides',
-        'hero-lead': 'Disseny d\'interiors i reformes integrals: modernitzem pisos antics amb solucions naturals, luminoses i funcionals. Seu a Castelló.',
-        'hero-cta': 'Contacta con Gemma',
-        'aprendizaje de héroe': 'Veureserveis',
-        'sobre-nombre': 'Gemma Insa Latorre',
-        'about-role': 'Dissenyadora d\'interiors i responsable de reformes',
-        'about-desc': 'Amb més de 10 anys transformant pisos: solucions pràctiques, materials naturals i acabats que perduren.',
-        'servicios-título': 'Serveis / Servicios',
-        's1-title': 'Disseny d\'interiores',
-        's1-desc': 'Distribuciones funcionales, paletas naturales y cables, selección de mobiliario e iluminación.',
-        's2-title': 'Reformas integrales',
-        's2-desc': 'Sanejament, electricitat, cuines i banys clau en mà, coordinació de gremis.',
-        's3-title': 'Asessoria de materiales',
-        's3-desc': 'Acabats naturales, soluciones sostenibles i pressupostos realistas.',
-        's4-title': 'Proyectos a mida',
-        's4-desc': 'Adaptem cada reforma al teu estil i pressupost.',
-        'projects-title': 'Galeria de projectes / Galería de proyectos',
-        'projects-desc': 'Ejemplos de reformas inspiradores d\'habitatges modestos i minimalistas.',
-        'budget-title': 'Pressupostos Orientatius a Castelló',
-        'budget-desc': 'Los precios son estimaciones basadas en costes mitjans del sector a la provincia de Castelló. El precio final depende siempre de la calidad de los acabats.',
-        'presupuesto-reforma-m²': 'Reforma Integral (preu por m²)',
-        'presupuesto-diseño-m²': 'Honoraris Diseño d\'Interiores',
-        'budget-average-70m': 'Reforma Integral Pis 70 m² (rang mitjà)',
-        'presupuesto-baño-6m': 'Reforma Bany (aprox. 6 m²)',
-        'cocina-presupuestaria-8m': 'Reforma Cuina (aprox. 8 m²)',
-        'budget-cta': 'Sol·licitar pressupost personalitzat',
-        'contact-title': 'Contacta con DECORINSA',
-        'contact-lead': '¿Tienes una idea de reforma al cap? Parlem del teu projecte.',
-        'contact-email': 'Correo electrónico',
-        'teléfono de contacto': 'Telèfon',
-        'contacto-ubicación': 'Ubicació'
-      }
-    };
-    función setLang(lang) {
-      const t = traducciones[lang];
-      documento.querySelectorAll('[data-i18n]').forEach(el => {
-        constante clave = el.getAttribute('data-i18n');
-        si (t[clave]) { el.textContent = t[clave]; }
-      });
-      documento.getElementById('lang-es').classList.remove('activo');
-      documento.getElementById('lang-ca').classList.remove('activo');
-      documento.getElementById('lang-' + lang).classList.add('activo');
-      document.documentElement.lang = idioma;
-      
-      // Accesibilidad: Actualizar aria-pressed
-      document.getElementById('lang-es').setAttribute('aria-pressed', lang === 'es');
-      document.getElementById('lang-ca').setAttribute('aria-pressed', lang === 'ca');
-    }
-    función openModal(imageSrc) {
-      const modal = document.getElementById('imageModal');
-      constante modalImage = document.getElementById('modalImage');
-      modalImage.src = imageSrc;
-      modal.classList.add('abrir');
-    }
-    función closeModal() {
-      documento.getElementById('imageModal').classList.remove('abrir');
-    }
-    documento.addEventListener('DOMContentLoaded', () => {
-      setLang('es');
 
-      // Cerrar modal con la tecla ESC
-      documento.addEventListener('keydown', (e) => {
-        si (e.key === 'Escape') {
-          cerrarModal();
-        }
-      });
-    });
-  </script>
-</cuerpo>
+    header {
+      background: linear-gradient(to right, #bfa890, #d9cbb8);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    header h2 {
+      font-size: 1.3em;
+      font-weight: 300;
+      margin-top: 8px;
+      color: #fefefe;
+    }
+
+    nav {
+      background-color: #ffffff;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #a67856;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #a67856;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+
+    .presupuestos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .presupuestos div {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .presupuestos h3 {
+      color: #a67856;
+      margin-bottom: 10px;
+    }
+
+    .presupuestos p {
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: #a67856;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .bilingue {
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DECORINSA</h1>
+    <h2>Diseño de interiores y reformas integrales en Castellón</h2>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#presupuestos">Presupuestos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>DECORINSA</strong>, liderado por <b>Gemma Insa Latorre</b>, transformamos viviendas antiguas en espacios modernos, luminosos y funcionales. Nos especializamos en reformas integrales, combinando diseño y eficiencia con materiales de alta calidad.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Proyectos</h2>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Salón reformado elegante">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="Cocina moderna blanca">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" alt="Baño minimalista">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Dormitorio cálido y moderno">
+      <img src="https://images.unsplash.com/photo-1598300056393-4e3f93a5f2f2" alt="Comedor reformado">
+      <img src="https://images.unsplash.com/photo-1616596871344-3f66b7a1cb9b" alt="Pasillo con iluminación moderna">
+      <img src="https://images.unsplash.com/photo-1600585154166-7a8a4c31a5d1" alt="Cocina con isla central">
+      <img src="https://images.unsplash.com/photo-1623120185413-6c0f3e45dcf3" alt="Baño reformado">
+      <img src="https://images.unsplash.com/photo-1618213836287-0d4b8f26cf3e" alt="Terraza decorada">
+      <img src="https://images.unsplash.com/photo-1600047502430-07f1a5c4a0f7" alt="Salón amplio con diseño natural">
+    </div>
+  </section>
+
+  <section id="presupuestos">
+    <h2>Presupuestos orientativos (Castellón)</h2>
+    <div class="presupuestos">
+      <div>
+        <h3>Cocina</h3>
+        <p>Desde <strong>4.000 €</strong> — reforma completa con mobiliario y encimera.</p>
+      </div>
+      <div>
+        <h3>Baño</h3>
+        <p>Desde <strong>3.000 €</strong> — cambio de azulejos, sanitarios y ducha.</p>
+      </div>
+      <div>
+        <h3>Salón</h3>
+        <p>Desde <strong>2.500 €</strong> — renovación integral de pintura, suelo e iluminación.</p>
+      </div>
+      <div>
+        <h3>Dormitorio</h3>
+        <p>Desde <strong>1.800 €</strong> — pintura, armarios empotrados y suelos nuevos.</p>
+      </div>
+      <div>
+        <h3>Vivienda completa</h3>
+        <p>Desde <strong>18.000 €</strong> — reforma integral, llaves en mano.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 <strong>685 646 384</strong></p>
+    <p>✉️ <a href="mailto:insagemma@gmail.com">insagemma@gmail.com</a></p>
+    <p>📍 Castellón de la Plana, España</p>
+  </section>
+
+  <footer>
+    <p>© 2025 DECORINSA — Diseño y reformas por Gemma Insa Latorre</p>
+    <p class="bilingue">Disponible en Español / Català</p>
+  </footer>
+
+</body>
 </html>
